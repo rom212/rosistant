@@ -1,0 +1,25 @@
+body {
+    background-color: #222222;
+    color: #0bdf5c;
+    font-family: "Lucida Sans Unicode","Lucida Console", "Courier New", monospace;
+}
+
+a {
+    color: #b7b1d2;
+}
+
+.main {
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+  }

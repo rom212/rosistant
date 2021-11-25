@@ -1,0 +1,15 @@
+.button {
+    background-color: #222222;
+    border: none;
+    color: #b7b1d2;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Lucida Sans Unicode","Lucida Console", "Courier New", monospace;
+  }
+
