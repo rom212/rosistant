@@ -8,16 +8,24 @@ import Nav from "./Components/Nav";
 import LoginForm from "./Components/LoginForm";
 import PleaseLogIn from "./Components/PleaseLogIn";
 import Meetings from "./Components/Meetings";
+import Success from "./Components/Success";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
   const [showPleaseLogin, setShowPleaseLogin] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [cogUser, setCogUser] = useState(undefined);
   const [rightNavContent, setRightNavContent] = useState(undefined);
 
   function cancelPleaseLogIn() {
     setShowPleaseLogin(false);
+  }
+ 
+  function cancelShowSuccess() {
+   
+    setShowSuccess(false);
+    setRightNavContent(undefined);
   }
 
   function updateCogUser(u) {
@@ -35,6 +43,10 @@ function App() {
   function onLogin() {
     setLoggedIn(true);
     setShowLogin(false);
+  }
+
+  function ShowSuccess(){
+    setShowSuccess(true);
   }
 
   function onLogoutButtonClickHandler() {
@@ -75,6 +87,15 @@ function App() {
         </div>
       ) : null}
 
+      {showSuccess ? (
+        <div>
+          <div className={styles.backdrop} onClick={cancelShowSuccess} />
+          <Success
+            cancelShowSuccess={cancelShowSuccess}
+          />
+        </div>
+      ) : null}
+
       <div className={styles}>
         <Nav
           onLogoutButtonClickHandler={onLogoutButtonClickHandler}
@@ -88,6 +109,7 @@ function App() {
             setShowPleaseLogin={setShowPleaseLogin}
             cancelPleaseLogIn={cancelPleaseLogIn}
             setRightNavContent={setRightNavContent}
+  
           />
 
           {(() => {
@@ -95,9 +117,9 @@ function App() {
               case undefined:
                 return <RightNav />;
               case "Meetings":
-                return <Meetings/>;
-                case "Interviews":
-                  return "ITW";
+                return <Meetings ShowSuccess={ShowSuccess}/>;
+              case "Interviews":
+                return "ITW";
               default:
                 return <RightNav />;
             }

@@ -1,0 +1,25 @@
+.main {
+    position: absolute;
+    background-color: #222222;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    z-index: 100;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: black;
+    border-radius: 8px;
+  }
+
+  .button {
+    background-color: #0bdf5c;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1rem 0 0 0;
+    border-radius: 2px;
+  }

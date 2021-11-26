@@ -23,6 +23,7 @@ function LeftNav(props) {
         >
           Interviews
         </LeftNavButton>
+        <hr></hr>
       </div>
     </div>
   );

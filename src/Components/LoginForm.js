@@ -34,7 +34,6 @@ function LoginForm(props) {
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: function (result) {
         let accessToken = result.getAccessToken().getJwtToken();
-        console.log(accessToken);
         localStorage.setItem("rosistant_token", accessToken);
         props.onlogIn();
       },
