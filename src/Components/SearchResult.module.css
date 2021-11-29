@@ -1,0 +1,50 @@
+.main {
+    cursor: pointer;
+    display: flex;
+    margin: 1rem;
+}
+.leftbox {
+  background-color: #0bdf5c;
+  color: white;
+  border: 1px;
+  border-radius: 4px 0 0 4px;
+  height: 5rem;
+  width: 4rem;
+  text-align: center;
+  border: 1px solid white;
+  float: left;
+}
+
+.rightbox {
+  background-color: #9892af;
+  color: white;
+  border: 1px;
+  border-radius: 0px 4px 4px 0px;
+  height: 5rem;
+  width: 25rem;
+  text-align: left;
+  border: 1px solid white;
+  float: left;
+}
+
+.leftcontent {
+  color: white;
+  top: 5%;
+  position: relative;
+}
+
+.rightcontent {
+  color: white;
+  top: 5%;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.score {
+    color: #b7b1d2;
+    float: left;
+    padding-left: 1rem;
+    position: relative;
+    align-self: flex-end;
+    bottom: 0;
+}

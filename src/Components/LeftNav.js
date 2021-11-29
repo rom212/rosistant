@@ -24,6 +24,14 @@ function LeftNav(props) {
           Interviews
         </LeftNavButton>
         <hr></hr>
+        <LeftNavButton
+          loggedIn={props.loggedIn}
+          cancelPleaseLogIn={props.cancelPleaseLogIn}
+          setShowPleaseLogin={props.setShowPleaseLogin}
+          setRightNavContent={props.setRightNavContent}
+        >
+          Search
+        </LeftNavButton>
       </div>
     </div>
   );

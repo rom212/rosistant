@@ -1,0 +1,59 @@
+.dateInput {
+  margin-bottom: 1rem;
+  font-family: "Leelawadee", "Lucida Sans Unicode", "Lucida Console",
+    "Courier New", monospace;
+}
+
+.textInput {
+  margin-bottom: 1rem;
+  width: 40rem;
+  font-family: "Leelawadee", "Lucida Sans Unicode", "Lucida Console",
+    "Courier New", monospace;
+}
+
+.contentInput {
+  margin-bottom: 1rem;
+  width: 40rem;
+  font-family: "Leelawadee", "Lucida Sans Unicode", "Lucida Console",
+    "Courier New", monospace;
+}
+
+.button {
+  float: right;
+  background-color: #0bdf5c;
+  border: none;
+  color: white;
+  padding: 10px 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Console", "Courier New", monospace;
+}
+
+.mainDisplay {
+  color: #b7b1d2;
+  width: 50rem;
+  padding: 5rem 3rem;
+  
+}
+
+.dateDisplay {
+    text-align: right;
+}
+
+.titleDisplay {
+  font-size: 26px;
+  
+}
+
+.participantsDisplay {
+  font-size: 18px;
+}
+
+
+.contentDisplay {
+    padding: 1rem;
+}

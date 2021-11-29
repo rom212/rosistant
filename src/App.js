@@ -9,6 +9,7 @@ import LoginForm from "./Components/LoginForm";
 import PleaseLogIn from "./Components/PleaseLogIn";
 import Meetings from "./Components/Meetings";
 import Success from "./Components/Success";
+import Search from "./Components/Search";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -21,9 +22,8 @@ function App() {
   function cancelPleaseLogIn() {
     setShowPleaseLogin(false);
   }
- 
+
   function cancelShowSuccess() {
-   
     setShowSuccess(false);
     setRightNavContent(undefined);
   }
@@ -45,7 +45,7 @@ function App() {
     setShowLogin(false);
   }
 
-  function ShowSuccess(){
+  function ShowSuccess() {
     setShowSuccess(true);
   }
 
@@ -90,9 +90,7 @@ function App() {
       {showSuccess ? (
         <div>
           <div className={styles.backdrop} onClick={cancelShowSuccess} />
-          <Success
-            cancelShowSuccess={cancelShowSuccess}
-          />
+          <Success cancelShowSuccess={cancelShowSuccess} />
         </div>
       ) : null}
 
@@ -109,7 +107,6 @@ function App() {
             setShowPleaseLogin={setShowPleaseLogin}
             cancelPleaseLogIn={cancelPleaseLogIn}
             setRightNavContent={setRightNavContent}
-  
           />
 
           {(() => {
@@ -117,9 +114,11 @@ function App() {
               case undefined:
                 return <RightNav />;
               case "Meetings":
-                return <Meetings ShowSuccess={ShowSuccess}/>;
+                return <Meetings ShowSuccess={ShowSuccess} />;
               case "Interviews":
                 return "ITW";
+              case "Search":
+                return <Search ShowSuccess={ShowSuccess} />;
               default:
                 return <RightNav />;
             }

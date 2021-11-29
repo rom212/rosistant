@@ -6,13 +6,13 @@ function Meetings(props) {
   const participantsInputRef = useRef();
   const tagsInputRef = useRef();
   const contentInputRef = useRef();
+  const titleInputRef = useRef();
 
   function onClickSubmitHandler(e) {
     e.preventDefault();
     let authToken = localStorage.getItem(
       "CognitoIdentityServiceProvider.5mn7h62f4knvejrosfk6jbieua.ro.idToken"
     );
- 
 
     fetch(
       "https://75kar4sd29.execute-api.us-east-1.amazonaws.com/prod/newdoc",
@@ -20,12 +20,15 @@ function Meetings(props) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": authToken
+          Authorization: authToken,
         },
         body: JSON.stringify({
           date: dateInputRef.current.value,
-          participants: participantsInputRef.current.value.toLowerCase().split(","),
+          participants: participantsInputRef.current.value
+            .toLowerCase()
+            .split(","),
           tags: tagsInputRef.current.value.toLowerCase().split(","),
+          title: titleInputRef.current.value,
           content: contentInputRef.current.value,
         }),
       }
@@ -59,6 +62,25 @@ function Meetings(props) {
           ></input>
         </div>
       </div>
+
+      <div>
+        <div>
+          <label htmlFor="title">
+            <b>Title: </b>
+          </label>
+        </div>
+        <div>
+          <input
+            ref={titleInputRef}
+            type="text"
+            placeholder="Enter title"
+            name="title"
+            required
+            className={styles.textInput}
+          ></input>
+        </div>
+      </div>
+
       <div>
         <div>
           <label htmlFor="participants">
